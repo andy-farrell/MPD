@@ -2,13 +2,12 @@
 <!-- Created by Andrew Farrell S1511335 -->
 
 <ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/vwSwitch">
 
-    <LinearLayout
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/mainScreen"
         android:layout_width="fill_parent"
@@ -19,7 +18,8 @@
         <include
             layout="@layout/nav_action_bar"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:id="@+id/nav-bar"/>
 
         <TextView
             android:id="@+id/textView"
@@ -28,32 +28,33 @@
             android:text="Andrew Farrell - S1511335"
             android:textAlignment="center"
             android:textSize="10sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:layout_below="@+id/nav-bar"/>
 
         <EditText
             android:id="@+id/inputFilter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="410dp"
+            android:layout_height="40dp"
             android:layout_margin="5dp"
             android:textColor="#000"
             android:background="@color/colorAccent"
             android:ems="10"
             android:hint="@string/search_for_depth_or_location"
             android:inputType="text"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_below="@+id/textView"/>
 
         <Button
             android:id="@+id/feedBtn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@color/colorPrimary"
             android:textColor="#FF4500"
-            android:layout_margin="10dp"
-            android:bottomRightRadius="5dp"
-            android:bottomLeftRadius="5dp"
-            android:topRightRadius="5dp"
-            android:topLeftRadius="5dp"
-            android:text="Load Feed / Search" />
+            android:text="Search"
+            android:layout_below="@+id/textView"
+            android:layout_toEndOf="@+id/inputFilter" />
 
 
         <ListView
@@ -62,11 +63,12 @@
             android:layout_height="400dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_below="@+id/feedBtn"
              />
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="fill_parent"
