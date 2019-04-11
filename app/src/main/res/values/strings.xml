@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EQUK</string>
+    <string name="search">Search</string>
+    <string name="search_for_depth_or_location">Search for Depth or Location...</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+
+</resources>
